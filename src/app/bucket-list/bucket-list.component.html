@@ -1,0 +1,17 @@
+
+<div class="row">
+    <div class="col-xs-10">
+      <app-bucket-edit></app-bucket-edit>
+      <hr>
+      <ul class="list-group">
+        <a
+          class="list-group-item"
+          style="cursor: pointer"
+          *ngFor="let activity of activities; let i = index"
+           (click)="onEditItem(i)">
+          {{ activity.name }} ({{ activity.amount }})
+        </a>
+      </ul>
+    </div>
+  </div>
+  

@@ -1,0 +1,60 @@
+
+<div class="row">
+    <div class="col-xs-12">
+      <img [src]= "trip.image" 
+      alt= {{trip.name}} 
+      class="img-responsive"
+      style = "max-height: 300px;">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+      <h1>{{trip.name}}</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="btn-group"
+      appDropdown
+      >
+        <button
+          type="button"
+          class="btn btn-primary dropdown-toggle">
+          Manage Trip <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu">
+          <li><a (click) = "onAddToBucketList()" style = "cursor: pointer">To Bucket List</a></li>
+          <li><a  style = "cursor: pointer" (click)="onEditTrip()">Edit Trip</a></li>
+          <li><a  style = "cursor: pointer" (click)="onTripDelete()">Delete Trip</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+      {{trip.description}}
+    </div>
+  </div>
+
+ <!-- <div class="row">
+    <div class="col-xs-12">
+      Activities</div></div> -->
+  <div class="row">
+    <div class="col-xs-12">
+      <ul class="list-group">
+        <li 
+        class="list-group-item"
+        *ngFor = "let activity of trip.activities">
+      {{activity.name}} -
+    {{activity.amount}}
+       </li>
+      </ul>
+    </div>
+  </div>
+
+ 
+    
+      
+       
+  
+  
