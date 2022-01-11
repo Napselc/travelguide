@@ -50,7 +50,7 @@ export class AuthService {
     return this.http
       .post<AuthResponseData>(
         'https://www.googleapis.com/identitytoolkit/v3/relyingparty/signupNewUser?key='+environment.fireBaseAPIKey,
-        
+         
         {
           email: email,
           password: password,
