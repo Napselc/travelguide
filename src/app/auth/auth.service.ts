@@ -26,7 +26,7 @@ export class AuthService {
   signUp(email: string, password: string) {
     return this.http
       .post<AuthResponseData>(
-        'https://www.googleapis.com/identitytoolkit/v3/relyingparty/signupNewUser?key='+environment.fireBaseAPIKey,
+        'https://www.googleapis.com/identitytoolkit/v3/relyingparty/signupNewUser?key=AIzaSyDH4vD8_sS2AfsMIBv4g1jKh1FZFRD_GZw',
         {
           email: email,
           password: password,
@@ -49,7 +49,7 @@ export class AuthService {
   login(email: string, password: string) {
     return this.http
       .post<AuthResponseData>(
-        'https://www.googleapis.com/identitytoolkit/v3/relyingparty/signupNewUser?key='+environment.fireBaseAPIKey,
+        'https://www.googleapis.com/identitytoolkit/v3/relyingparty/signupNewUser?key=AIzaSyDH4vD8_sS2AfsMIBv4g1jKh1FZFRD_GZw',
          
         {
           email: email,
@@ -57,17 +57,17 @@ export class AuthService {
           returnSecureToken: true
         }
       )
-      .pipe(
-        catchError(this.handleError),
-        tap(resData => {
-          this.handleAuthentication(
-            resData.email,
-            resData.localId,
-            resData.idToken,
-            +resData.expiresIn
-          );
-        })
-      );
+      // .pipe(
+      //   catchError(this.handleError),
+      //   tap(resData => {
+      //     this.handleAuthentication(
+      //       resData.email,
+      //       resData.localId,
+      //       resData.idToken,
+      //       +resData.expiresIn
+      //     );
+      //   })
+      // );
   }
 
   logout(){
