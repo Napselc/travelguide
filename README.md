@@ -15,7 +15,7 @@ Build:
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-# Hosted in Firebase: 
+# Hosted on Firebase: 
 https://bucketlist-21095.web.app/auth
 # Database : 
 Firebase
